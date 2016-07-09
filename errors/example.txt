@@ -1,0 +1,278 @@
+APP_VERSION_NAME = 1.1.5
+LOGCAT = 07-08 23:02:08.091 E/ACRA    (21235): 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:716)
+07-08 23:02:08.091 E/ACRA    (21235): 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:847)
+07-08 23:02:08.091 E/ACRA    (21235): 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+07-08 23:02:08.091 E/ACRA    (21235): 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:855)
+07-08 23:02:08.091 E/ACRA    (21235): 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+07-08 23:02:08.091 E/ACRA    (21235): 	at android.view.LayoutInflater.inflate(LayoutInflater.java:527)
+07-08 23:02:08.091 E/ACRA    (21235): 	... 17 more
+07-08 23:02:08.091 E/ACRA    (21235): Caused by: java.lang.reflect.InvocationTargetException
+07-08 23:02:08.091 E/ACRA    (21235): 	at java.lang.reflect.Constructor.newInstance(Native Method)
+07-08 23:02:08.091 E/ACRA    (21235): 	at android.view.LayoutInflater.createView(LayoutInflater.java:631)
+07-08 23:02:08.091 E/ACRA    (21235): 	... 24 more
+07-08 23:02:08.091 E/ACRA    (21235): Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+07-08 23:02:08.091 E/ACRA    (21235): 	at com.gamerscave.codingclicker.Clicker.init(Clicker.java:207)
+07-08 23:02:08.091 E/ACRA    (21235): 	at com.gamerscave.codingclicker.Clicker.<init>(Clicker.java:190)
+07-08 23:02:08.091 E/ACRA    (21235): 	... 26 more
+07-08 23:02:08.111 D/ViewRootImpl(21235): #1 mView = android.widget.LinearLayout{eace4b7 V.E...... ......I. 0,0-0,0 #102039d android:id/toast_layout_root}
+07-08 23:02:08.111 D/SecWifiDisplayUtil(21235): Metadata value : SecSettings2
+07-08 23:02:08.151 D/mali_winsys(21235): new_window_surface returns 0x3000,  [1336x272]-format:1
+07-08 23:02:08.151 D/ViewRootImpl(21235): MSG_RESIZED_REPORT: ci=Rect(0, 0 - 0, 0) vi=Rect(0, 0 - 0, 0) or=1
+07-08 23:02:08.151 I/art     (21235): Starting a blocking GC HeapTrim
+07-08 23:02:08.161 I/ACRA    (20992): Sending report /data/user/0/com.gamerscave.codingclicker/app_ACRA-approved/2016-07-08T23:02:08.135+02:00.stacktrace
+07-08 23:02:08.181 I/System.out(20992): (HTTPLog)-Static: isSBSettingEnabled false
+07-08 23:02:08.181 I/System.out(20992): (HTTPLog)-Static: isSBSettingEnabled false
+07-08 23:02:08.681 I/ACRA    (20992): Request received by server
+07-08 23:02:10.451 I/Process (21235): Sending signal. PID: 21235 SIG: 9
+07-08 23:02:33.411 W/SELinux (21282): SELinux: seapp_context_lookup: seinfo=default, level=s0:c512,c768, pkgname=com.gamerscave.codingclicker 
+07-08 23:02:33.411 I/art     (21282): Late-enabling -Xcheck:jni
+07-08 23:02:33.441 D/TimaKeyStoreProvider(21282): TimaSignature is unavailable
+07-08 23:02:33.441 D/ActivityThread(21282): Added TimaKeyStore provider
+07-08 23:02:33.451 I/InjectionManager(21282): Inside getClassLibPath + mLibMap{0=, 1=}
+07-08 23:02:33.451 W/ResourcesManager(21282): getTopLevelResources: /data/app/com.gamerscave.codingclicker-1/base.apk / 1.0 running in com.gamerscave.codingclicker rsrc of package com.gamerscave.codingclicker
+07-08 23:02:33.461 I/InjectionManager(21282): Inside getClassLibPath caller 
+07-08 23:02:33.461 W/System  (21282): ClassLoader referenced unknown path: /data/app/com.gamerscave.codingclicker-1/lib/arm64
+07-08 23:02:33.461 D/ResourcesManager(21282): For user 0 new overlays fetched Null
+07-08 23:02:33.471 I/ACRA    (21282): ACRA is enabled for com.gamerscave.codingclicker, initializing...
+07-08 23:02:33.501 D/InjectionManager(21282): InjectionManager
+07-08 23:02:33.501 D/InjectionManager(21282): fillFeatureStoreMap com.gamerscave.codingclicker
+07-08 23:02:33.501 I/InjectionManager(21282): Constructor com.gamerscave.codingclicker, Feature store :{}
+07-08 23:02:33.501 I/InjectionManager(21282): featureStore :{}
+07-08 23:02:33.501 W/ResourcesManager(21282): getTopLevelResources: /data/app/com.gamerscave.codingclicker-1/base.apk / 1.0 running in com.gamerscave.codingclicker rsrc of package com.gamerscave.codingclicker
+07-08 23:02:33.501 W/ResourcesManager(21282): getTopLevelResources: /data/app/com.gamerscave.codingclicker-1/base.apk / 1.0 running in com.gamerscave.codingclicker rsrc of package com.gamerscave.codingclicker
+07-08 23:02:33.551 D/Activity(21282): performCreate Call Injection manager
+07-08 23:02:33.551 I/InjectionManager(21282): dispatchOnViewCreated > Target : com.gamerscave.codingclicker.Splash isFragment :false
+07-08 23:02:33.551 D/ViewRootImpl(21282): #1 mView = com.android.internal.policy.PhoneWindow$DecorView{e1129f5 I.E...... R.....ID 0,0-0,0}
+07-08 23:02:33.551 D/OpenGLRenderer(21282): Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+07-08 23:02:33.551 D/SecWifiDisplayUtil(21282): Metadata value : SecSettings2
+07-08 23:02:33.621 D/libEGL  (21282): loaded /vendor/lib64/egl/libGLES_mali.so
+07-08 23:02:33.631 D/libEGL  (21282): eglInitialize EGLDisplay = 0x7f903ff178
+07-08 23:02:33.631 I/OpenGLRenderer(21282): Initialized EGL, version 1.4
+07-08 23:02:33.631 D/        (21282): ro.exynos.dss isEnabled: 0
+07-08 23:02:33.631 D/mali_winsys(21282): new_window_surface returns 0x3000,  [1440x2560]-format:1
+07-08 23:02:33.641 D/ViewRootImpl(21282): MSG_RESIZED_REPORT: ci=Rect(0, 0 - 0, 0) vi=Rect(0, 0 - 0, 0) or=1
+07-08 23:02:33.651 D/libGLESv1(21282): DTS_GLAPI : DTS is not allowed for Package : com.gamerscave.codingclicker
+07-08 23:02:33.681 I/Timeline(21282): Timeline: Activity_idle id: android.os.BinderProxy@f685032 time:168058190
+07-08 23:02:36.571 I/Timeline(21282): Timeline: Activity_launch_request id:com.gamerscave.codingclicker time:168061083
+07-08 23:02:36.601 W/ResourcesManager(21282): getTopLevelResources: /data/app/com.gamerscave.codingclicker-1/base.apk / 1.0 running in com.gamerscave.codingclicker rsrc of package com.gamerscave.codingclicker
+07-08 23:02:36.691 D/AndroidRuntime(21282): Shutting down VM
+07-08 23:02:36.691 E/ACRA    (21282): ACRA caught a RuntimeException for com.gamerscave.codingclicker
+07-08 23:02:36.691 E/ACRA    (21282): java.lang.RuntimeException: Unable to start activity ComponentInfo{com.gamerscave.codingclicker/com.gamerscave.codingclicker.Game}: android.view.InflateException: Binary XML file line #21: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3254)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3350)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.ActivityThread.access$1100(ActivityThread.java:222)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1795)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.os.Looper.loop(Looper.java:158)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.ActivityThread.main(ActivityThread.java:7229)
+07-08 23:02:36.691 E/ACRA    (21282): 	at java.lang.reflect.Method.invoke(Native Method)
+07-08 23:02:36.691 E/ACRA    (21282): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1230)
+07-08 23:02:36.691 E/ACRA    (21282): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1120)
+07-08 23:02:36.691 E/ACRA    (21282): Caused by: android.view.InflateException: Binary XML file line #21: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.inflate(LayoutInflater.java:551)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.inflate(LayoutInflater.java:429)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.inflate(LayoutInflater.java:380)
+07-08 23:02:36.691 E/ACRA    (21282): 	at com.android.internal.policy.PhoneWindow.setContentView(PhoneWindow.java:474)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.Activity.setContentView(Activity.java:2387)
+07-08 23:02:36.691 E/ACRA    (21282): 	at com.gamerscave.codingclicker.Game.onCreate(Game.java:62)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.Activity.performCreate(Activity.java:6876)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1135)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3207)
+07-08 23:02:36.691 E/ACRA    (21282): 	... 9 more
+07-08 23:02:36.691 E/ACRA    (21282): Caused by: android.view.InflateException: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.createView(LayoutInflater.java:657)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:776)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:716)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:847)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:855)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.inflate(LayoutInflater.java:527)
+07-08 23:02:36.691 E/ACRA    (21282): 	... 17 more
+07-08 23:02:36.691 E/ACRA    (21282): Caused by: java.lang.reflect.InvocationTargetException
+07-08 23:02:36.691 E/ACRA    (21282): 	at java.lang.reflect.Constructor.newInstance(Native Method)
+07-08 23:02:36.691 E/ACRA    (21282): 	at android.view.LayoutInflater.createView(LayoutInflater.java:631)
+07-08 23:02:36.691 E/ACRA    (21282): 	... 24 more
+07-08 23:02:36.691 E/ACRA    (21282): Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+07-08 23:02:36.691 E/ACRA    (21282): 	at com.gamerscave.codingclicker.Clicker.init(Clicker.java:207)
+07-08 23:02:36.691 E/ACRA    (21282): 	at com.gamerscave.codingclicker.Clicker.<init>(Clicker.java:190)
+07-08 23:02:36.691 E/ACRA    (21282): 	... 26 more
+07-08 23:02:36.721 D/ViewRootImpl(21282): #1 mView = android.widget.LinearLayout{eace4b7 V.E...... ......I. 0,0-0,0 #102039d android:id/toast_layout_root}
+07-08 23:02:36.721 D/SecWifiDisplayUtil(21282): Metadata value : SecSettings2
+
+APP_VERSION_CODE = 115
+CUSTOM_DATA = 
+STACK_TRACE = java.lang.RuntimeException: Unable to start activity ComponentInfo{com.gamerscave.codingclicker/com.gamerscave.codingclicker.Game}: android.view.InflateException: Binary XML file line #21: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3254)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3350)
+	at android.app.ActivityThread.access$1100(ActivityThread.java:222)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1795)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:158)
+	at android.app.ActivityThread.main(ActivityThread.java:7229)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1230)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1120)
+Caused by: android.view.InflateException: Binary XML file line #21: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:551)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:429)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:380)
+	at com.android.internal.policy.PhoneWindow.setContentView(PhoneWindow.java:474)
+	at android.app.Activity.setContentView(Activity.java:2387)
+	at com.gamerscave.codingclicker.Game.onCreate(Game.java:62)
+	at android.app.Activity.performCreate(Activity.java:6876)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1135)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3207)
+	... 9 more
+Caused by: android.view.InflateException: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+	at android.view.LayoutInflater.createView(LayoutInflater.java:657)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:776)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:716)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:847)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:855)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:527)
+	... 17 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.lang.reflect.Constructor.newInstance(Native Method)
+	at android.view.LayoutInflater.createView(LayoutInflater.java:631)
+	... 24 more
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+	at com.gamerscave.codingclicker.Clicker.init(Clicker.java:207)
+	at com.gamerscave.codingclicker.Clicker.<init>(Clicker.java:190)
+	... 26 more
+android.view.InflateException: Binary XML file line #21: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:551)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:429)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:380)
+	at com.android.internal.policy.PhoneWindow.setContentView(PhoneWindow.java:474)
+	at android.app.Activity.setContentView(Activity.java:2387)
+	at com.gamerscave.codingclicker.Game.onCreate(Game.java:62)
+	at android.app.Activity.performCreate(Activity.java:6876)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1135)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3207)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3350)
+	at android.app.ActivityThread.access$1100(ActivityThread.java:222)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1795)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:158)
+	at android.app.ActivityThread.main(ActivityThread.java:7229)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1230)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1120)
+Caused by: android.view.InflateException: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+	at android.view.LayoutInflater.createView(LayoutInflater.java:657)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:776)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:716)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:847)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:855)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:527)
+	... 17 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.lang.reflect.Constructor.newInstance(Native Method)
+	at android.view.LayoutInflater.createView(LayoutInflater.java:631)
+	... 24 more
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+	at com.gamerscave.codingclicker.Clicker.init(Clicker.java:207)
+	at com.gamerscave.codingclicker.Clicker.<init>(Clicker.java:190)
+	... 26 more
+android.view.InflateException: Binary XML file line #21: Error inflating class com.gamerscave.codingclicker.Clicker
+	at android.view.LayoutInflater.createView(LayoutInflater.java:657)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:776)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:716)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:847)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:855)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:527)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:429)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:380)
+	at com.android.internal.policy.PhoneWindow.setContentView(PhoneWindow.java:474)
+	at android.app.Activity.setContentView(Activity.java:2387)
+	at com.gamerscave.codingclicker.Game.onCreate(Game.java:62)
+	at android.app.Activity.performCreate(Activity.java:6876)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1135)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3207)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3350)
+	at android.app.ActivityThread.access$1100(ActivityThread.java:222)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1795)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:158)
+	at android.app.ActivityThread.main(ActivityThread.java:7229)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1230)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1120)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.lang.reflect.Constructor.newInstance(Native Method)
+	at android.view.LayoutInflater.createView(LayoutInflater.java:631)
+	... 24 more
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+	at com.gamerscave.codingclicker.Clicker.init(Clicker.java:207)
+	at com.gamerscave.codingclicker.Clicker.<init>(Clicker.java:190)
+	... 26 more
+java.lang.reflect.InvocationTargetException
+	at java.lang.reflect.Constructor.newInstance(Native Method)
+	at android.view.LayoutInflater.createView(LayoutInflater.java:631)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:776)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:716)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:847)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:855)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:527)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:429)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:380)
+	at com.android.internal.policy.PhoneWindow.setContentView(PhoneWindow.java:474)
+	at android.app.Activity.setContentView(Activity.java:2387)
+	at com.gamerscave.codingclicker.Game.onCreate(Game.java:62)
+	at android.app.Activity.performCreate(Activity.java:6876)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1135)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3207)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3350)
+	at android.app.ActivityThread.access$1100(ActivityThread.java:222)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1795)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:158)
+	at android.app.ActivityThread.main(ActivityThread.java:7229)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1230)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1120)
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+	at com.gamerscave.codingclicker.Clicker.init(Clicker.java:207)
+	at com.gamerscave.codingclicker.Clicker.<init>(Clicker.java:190)
+	... 26 more
+java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+	at com.gamerscave.codingclicker.Clicker.init(Clicker.java:207)
+	at com.gamerscave.codingclicker.Clicker.<init>(Clicker.java:190)
+	at java.lang.reflect.Constructor.newInstance(Native Method)
+	at android.view.LayoutInflater.createView(LayoutInflater.java:631)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:776)
+	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:716)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:847)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.rInflate(LayoutInflater.java:855)
+	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:810)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:527)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:429)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:380)
+	at com.android.internal.policy.PhoneWindow.setContentView(PhoneWindow.java:474)
+	at android.app.Activity.setContentView(Activity.java:2387)
+	at com.gamerscave.codingclicker.Game.onCreate(Game.java:62)
+	at android.app.Activity.performCreate(Activity.java:6876)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1135)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3207)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3350)
+	at android.app.ActivityThread.access$1100(ActivityThread.java:222)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1795)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:158)
+	at android.app.ActivityThread.main(ActivityThread.java:7229)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1230)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1120)
+
+PHONE_MODEL = SM-G925F
+ANDROID_VERSION = 6.0.1
