@@ -26,3 +26,6 @@ When you are on your computer open 'file name is not decided and not made'.
 * You can manually transfer all .txt files into an sql database
 * You can view all the entries in the SQL database.
 * If your website does not have databases, remove the database dependant files in errors/
+* 
+
+However, this backend is not completed yet. I am working on it now and it will be up soon.
