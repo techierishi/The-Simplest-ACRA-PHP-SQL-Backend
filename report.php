@@ -7,7 +7,7 @@
             /**
              * The point of the email informative system is to inform you when crashes occur. This allows you to clear the SQL database.
              */
-            $mail = 'admin@gamers-cave-world.com';
+            $mail = 'yourmail';
             $subj = "Crash";
             $msg = 'A crash occured in one of your apps. This happened at ' . $date . '. Move it over to the SQL database <a href="https://gamers-cave-world.com/android/crash/tosql.php">now!</a>
             <br>With love from your trusty ACRA backend!
