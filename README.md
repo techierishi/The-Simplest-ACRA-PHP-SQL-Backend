@@ -13,9 +13,23 @@ If you are not using one.com, do not use the long link, in .htaccess instead say
 
 # Using it:
 
-Link to the file called "report.php in the first directory in your java file.
+Link to the file called "report.php" in the first directory in your java file.
+Edit the file with your email(if you want to recieve emails) and set the boolean to "true".
 
-When you are on your computer open crash/tosql.php.
+You will only recieve mails if the directory is empty. Which means you will only be informed about new crashes since you emptied the logs folder.
+!!SQL REQUIRED FOR THIS!!
+
+When you are on your computer open crash/tosql.php. This file will transfer all .txt files in logs to the SQL database.
+
+Remember, for 100% functionality, name the table 'exceptions'. 
+
+In index.php and tosql.php, remember to add:
+* Database name
+* Database host
+* Database username
+* Database password
+
+Some places the table is set fixed to 'exceptions', for an instance in the tosql file there is a method that converts all the strings to SQL insert command.
 
 # Features:
 
@@ -23,7 +37,14 @@ When you are on your computer open crash/tosql.php.
 * Easy to use
 * You can manually transfer all .txt files into an sql database
 * You can view all the entries in the SQL database.
+* You can view all .txt files without entering them into the SQL database(very important if your server does not support MySQL.
 * If your website does not have databases, remove the database dependant files in errors/
-* For non-database support, errors/viewfiles.php allows you to see the files. (No delete-function added)
 
-We are almost ready for publishing
+
+The project is uploaded.
+
+
+This project is licenced under Creative Commons 4.0 Attribution Licence.
+Feel free to support the project by adding design or improving the PHP code. Keep the links in a simple format so they don't screw up the code.
+
+-Gamers Cave
