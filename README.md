@@ -41,10 +41,19 @@ Some places the table is set fixed to 'exceptions', for an instance in the tosql
 * If your website does not have databases, remove the database dependant files in errors/
 
 
-The project is uploaded.
+# Notes:
+
+No .htaccess or .htpasswd is created. Create them yourself.
+
+A good idea is to **not** password protect 'submit.php' as that would require you to add password and username in the Java code. Java code 
+isn't really that save, even inside the APK. There are multiple ways to break into the APK source code and see it and then your password 
+and username would be out in the open. And passwords and username can be exploited.
 
 
 This project is licenced under Creative Commons 4.0 Attribution Licence.
 Feel free to support the project by adding design or improving the PHP code. Keep the links in a simple format so they don't screw up the code.
 
--Gamers Cave
+So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really is just to add the files to your website.
+
+ENJOY!
+Gamers Cave
