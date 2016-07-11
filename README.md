@@ -75,6 +75,15 @@ The package field is set to latin1_swedish_ci by default for some reason. utf8_g
 
 <img src=https://gamers-cave-world.com/publicimg/tables.png></img>
 
+
+**WARNING!**
+<br>This project uses MySQL which means your PHP version has to be 5.6 or lower. PHP 7 removes MySQL functions from it making this 
+software useless. Avoid PHP 7 if you are to use this project. The PHP versions this project supports is:
+* 5.5.0
+* 5.6.0
+
+Support for other versions may be added, but please create separate folders.(e.g. php 7 will be in PHP 7/errors/...)
+
 # Features:
 
 * Simple setup
