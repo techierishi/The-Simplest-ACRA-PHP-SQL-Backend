@@ -5,7 +5,9 @@
 # Setup:
 
 ## Server side:
-You need a PHP MySQL server. Because of the simplicify of all this you can use webhosts like one.com. We're using that and we cannot use any other backends because of the complexity(of the other backends). (NOTE: No SQL database is needed. Do not use index.php or tosql.php in errors/ if you do not have a database)
+You need a PHP MySQL server. Because of the simplicify of all this you can use webhosts like one.com. We're using that and we cannot use 
+any other backends because of the complexity(of the other backends). (NOTE: No SQL database is needed. Do not use index.php or tosql.php in
+errors/ if you do not have a database)
 
 Once you have the requirements above, simply add the files to your website. Nothing else is required all though we recommend adding 
 password protection in the errors folder. If you protect report.php you will need a password in the Java class.
@@ -19,7 +21,8 @@ In the ACRA class that extends Application:
 @ReportsCrashes(
 
         formUri = "..../report.php",//Non-password protected.
-        customReportContent = { /* */ReportField.APP_VERSION_NAME, ReportField.PACKAGE_NAME,ReportField.ANDROID_VERSION, ReportField.PHONE_MODEL,ReportField.LOGCAT },
+        customReportContent = { /* */ReportField.APP_VERSION_NAME, ReportField.PACKAGE_NAME,ReportField.ANDROID_VERSION,
+        ReportField.PHONE_MODEL,ReportField.LOGCAT },
         mode = ReportingInteractionMode.TOAST,
         resToastText = R.string.crash_toast_text
 
@@ -54,6 +57,16 @@ In index.php and tosql.php, remember to add:
 * Database username
 * Database password
 
+## Proguard:
+
+If your app is using Proguard, no need to worry! We have tested our app with release and Proguard activated and it works. The file is not 
+scrabled and the StackTrace is accurate to the error we caused. We have been testing with a crash we have been triggering ourselves and 
+the Stacktrace matches the one of a non-scrambled text file(in terms of the error and location of the error. Times are not the same. 
+StackTrace may change from error to error but the error pinpointing is the same.)
+
+So you can both have ACRA and Proguard with this backend!
+
+
 ## IMPORTANT!
 
 Some places the table is set fixed to 'exceptions', for an instance in the tosql file there is a method that converts all the strings to 
@@ -82,9 +95,13 @@ and username would be out in the open. And passwords and username can be exploit
 
 
 This project is licenced under Creative Commons 4.0 Attribution Licence.
-Feel free to support the project by adding design or improving the PHP code. Keep the links in a simple format so they don't screw up the code.
+Feel free to support the project by adding design or improving the PHP code. Keep the links in a simple format so they don't screw up the 
+code.
 
-So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really is just to add the files to your website.
+So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really is 
+just to add the files to your website.
+
+P.S: If we forgot something, open an issue and we will answer and add it to this file.
 
 ENJOY!
 Gamers Cave
