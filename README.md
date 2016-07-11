@@ -4,12 +4,37 @@
 
 # Setup:
 
+## Server side:
 You need a PHP MySQL server. Because of the simplicify of all this you can use webhosts like one.com. We're using that and we cannot use any other backends because of the complexity(of the other backends). (NOTE: No SQL database is needed. Do not use index.php or tosql.php in errors/ if you do not have a database)
 
-Once you have the requirements above, simply add the files to your website. Nothing else is required except:
-Change the .htpasswd file in the "errors" folder to fit your requirements. Setting up the password: http://one-docs.com/tools/basic-auth
+Once you have the requirements above, simply add the files to your website. Nothing else is required all though we recommend adding 
+password protection in the errors folder. If you protect report.php you will need a password in the Java class.
 
 If you are not using one.com, do not use the long link, in .htaccess instead say(if it is in the same folder): .htpasswd
+
+## Client side:
+
+In the ACRA class that extends Application:
+
+@ReportsCrashes(
+
+        formUri = "..../report.php",//Non-password protected.
+        customReportContent = { /* */ReportField.APP_VERSION_NAME, ReportField.PACKAGE_NAME,ReportField.ANDROID_VERSION, ReportField.PHONE_MODEL,ReportField.LOGCAT },
+        mode = ReportingInteractionMode.TOAST,
+        resToastText = R.string.crash_toast_text
+
+)
+
+Permissiosn required:
+
+<uses-permission android:name="android.permission.INTERNET" /><br>
+<uses-permission android:name="android.permission.READ_LOGS"/>
+
+If you want to use other fields in the custom report content remember to add the fields in the database and you also have to customize
+the tosql class. Changing content changes the order of the content. 
+
+For the setup of ACRA, <a href="https://github.com/ACRA/acra/wiki/BasicSetup">see this link</a>.
+
 
 # Using it:
 
@@ -29,7 +54,13 @@ In index.php and tosql.php, remember to add:
 * Database username
 * Database password
 
-Some places the table is set fixed to 'exceptions', for an instance in the tosql file there is a method that converts all the strings to SQL insert command.
+## IMPORTANT!
+
+Some places the table is set fixed to 'exceptions', for an instance in the tosql file there is a method that converts all the strings to 
+SQL insert command. That is why it is a good idea to call the table exceptions. Here is the fields.(NOTE: All should have utf8_general_ci. 
+The package field is set to latin1_swedish_ci by default for some reason. utf8_general_ci.)
+
+<img src=https://gamers-cave-world.com/publicimg/tables.png></img>
 
 # Features:
 
