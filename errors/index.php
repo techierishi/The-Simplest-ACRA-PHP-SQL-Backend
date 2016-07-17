@@ -14,31 +14,45 @@
     <br> Visit our website: <a href="https://gamers-cave-world.com">gamers-cave-world.com</a></p>
     <head>
         <title>All error logs:</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <table border="1" style="border:1px solid black;">
+        <table border="1" style="border:2px solid black;">
             <thead>
                 <tr>
                     <td>time</td>
+                    <td>newest_report</td>
+                    <td>issue_id</td>
                     <td>android_version</td>
                     <td>device_id</td>
                     <td>app_version</td>
                     <td>stacktrace</td>
                     <td>package</td>
+                    <td>recorded_events</td>
+                    <td>delete report</td>
+                    <?php echo "<td> <a href=\"delete.php?all=true\">Delete all</a></td>"?>
                 </tr>
             </thead>
             <tbody>
             <?php
-                $servername = '*';
-                $username = '*';
-                $password = '*';
-                $dbname = '*';
+            
+                
+                if(isset($_REQUEST['state'])){
+                    $delete = $_REQUEST['state'];
+                    echo 'Deletion of file: ' . $delete . '<br>';
+                    
+                }
+            
+                $servername = '';
+                $username = '';
+                $password = '';
+                $dbname = '';
         
                 $mysql = mysql_connect($servername, $username, $password);
                 mysql_select_db($dbname);
                 
                 echo 'STATUS: CONNECTED TO DATABASE<br>';
-                $result = mysql_query("SELECT * FROM exceptions ORDER BY package", $mysql);
+                $result = mysql_query("SELECT * FROM exceptions ORDER BY package ASC, time ASC", $mysql);
                 
                 if($result === FALSE) { 
                     die(mysql_error()); // TODO: better error handling
@@ -54,21 +68,29 @@
                 }
                 
                 while($row = mysql_fetch_assoc($result)) {
+                    $id = $row['time'];
                ?>
                
                     <tr>
                         
                         <td><?php echo $row['time'];?></td>
+                        <td><?php echo $row['newest_report'];?></td>
+                        <td><?php echo $row['issue_id'];?></td>
                         <td ><?php echo $row['android_version'];?></td>
                         <td ><?php echo $row['device_id'];?></td>
                         <td ><?php echo $row['app_version'];?></td>
                         <td ><?php echo $row['stacktrace'];?></td>
                         <td ><?php echo $row['package'];?></td>
+                       <td> <?php echo $row['recorded_events'];?></td>
+                        <?php echo "<td> <a href=\"delete.php?time=$id\">Delete</a></td>"?>
                        
                     </tr>
     
+    
+    
                 <?php
                 }
+                
                 
                 
                 

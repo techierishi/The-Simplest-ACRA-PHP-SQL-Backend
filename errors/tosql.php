@@ -14,6 +14,7 @@ EXCEPTION: IF THIS IS ON GITHUB.
 
 */
 
+
 function listFiles(){
     echo "Listing files.<br>";
     echo "------------------------------------<br>";
@@ -29,7 +30,7 @@ function listFiles(){
     }
     echo "------------------------------------<br>";
     echo "All queries done. <br>";
-    echo 'Transfered ' . $files . ' files, ' . ($files * 6) . ' values to the SQL database.';
+    echo 'Transfered ' . $files . ' files, ' . ($files * 9) . ' values to the SQL database.';
 }
 function replaceStrings($file){
    
@@ -64,11 +65,13 @@ function bicou_mysql_insert($object) {
 	return $cols.$vals;
 }
 function initializeSQL($file, $device_id, $android_ver, $app_version, $time, $LOG, $package){
-    $servername = '*';
-    $username = '*';
-    $password = '*';
-    $dbname = '*';
+    $servername = '';
+    $username = '';
+    $password = '';
+    $dbname = '';
+    $delim = 'TH12124D3L1M1TOR';
     
+    echo $issue_id;
     
     $mysql = mysql_connect($servername, $username, $password);
     mysql_select_db($dbname);
@@ -82,14 +85,106 @@ function initializeSQL($file, $device_id, $android_ver, $app_version, $time, $LO
     $obj['app_version'] = $app_version;
     $obj['package'] = $package;
     
-	$sql =  bicou_mysql_insert($obj);
-	if(!mysql_query($sql, $mysql)){
-	    die(mysql_error());
-	}
+    
+
+	$reworkedLog = $LOG;
+	$reworkedLog = str_replace('LOGCAT =', '', $reworkedLog);
+	
+	$reworkedLog = preg_replace("'\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d*'", '', $reworkedLog);
+	$reworkedLog = preg_replace("'$\d*'", '', $reworkedLog);
+	$reworkedLog = preg_replace("'0x[0-9a-f]*'", '', $reworkedLog);
+	$reworkedLog = preg_replace("'(\d{5})'",'', $reworkedLog);
+	$reworkedLog = preg_replace("'... \d{1} more'", '', $reworkedLog);
+	$reworkedLog = preg_replace("'... \d{2} more'", '', $reworkedLog);
 	
 	
+    
+   
+	$issue_id = bicou_issue_id($reworkedLog, $package) . '<br>';
+	echo $issue_id;
+	$obj['issue_id'] = $issue_id;
+	$obj['newest_report'] = $time;
+	$obj['recorded_events'] = 1;
+	/**
+	 * The following code is created with two variables, issue id and package, to ensure that
+	 * the issue of one app isn't overridden by another! This is really annyouing as issues
+	 * from two different apps would merge together causing missing errors in the app that comes
+	 * after the first error. md5 generates codes based on the content, but it might sometimes
+	 * generate the same ID over and over.
+	 */
+	$getIssueID = "SELECT * FROM exceptions WHERE issue_id='$issue_id', package='$package'";
+    $lookForIssueId = mysql_query($getIssueID);
+    if(!$lookForIssueId) echo 'failed! <br>';
+    else echo 'Success!!! Issue ID loaded<br>';
+    
+    $count = mysql_num_rows($lookForIssueId);
+    
+    if($count > 0){
+        echo $count . 'exists. Replacing values newest_report and recorded_events<br>';
+        $row = mysql_fetch_assoc($lookForIssueId);
+      date_default_timezone_set("Europe/Berlin");
+    $date = date('d-m-Y_H-i-s');
+            $newestReport = $date;
+            $recorded_events = intval($row['recorded_events']);
+            $recorded_events += 1;
+            mysql_query("UPDATE exceptions SET newest_report='$newestReport', recorded_events='$recorded_events' WHERE issue_id = $issue_id");
+            echo 'Updated SQL entry. Newest report: ' . $newestReport . '. Recorded events: ' . $recorded_events . '<br>';
+        
+    }else if(count == 0 || count < 0){
+	    echo 'New issue!! ID: ' . $issue_id . '. '
+    	$sql =  bicou_mysql_insert($obj);
+    	if(!mysql_query($sql, $mysql)){
+    	    die(mysql_error());
+    	}
+    }else{
+        echo 'ERROR';
+    }
     unlink($file);//Removes the file
-    echo 'Data inserted into DB and file deleted<br>';
+    echo 'Data inserted into DB ' . $dbname . ' table \'exceptions\' and file deleted<br>';
     mysql_close($mysql);
 }
+
+
+    // Finds in array
+    function array_find($needle, $haystack) {
+    	foreach($haystack as $k => $v) {
+    		if (strstr($v, $needle) !== FALSE) {
+    			return $k;
+    		}
+    	}
+    	return FALSE;
+    }
+    function bicou_short_stack_trace($stack_trace, $package) {
+    	$lines = explode("\n", $stack_trace);
+    	if (array_find(": ", $lines) === FALSE && array_find($package, $lines) === FALSE) {
+    		$value = $lines[0];
+    	} else {
+    		$value = "";
+    		foreach ($lines as $id => $line) {
+    		if (strpos($line, $package) !== FALSE
+    			 || strpos($line, "Error") !== FALSE || strpos($line, "E/ACRA") !== FALSE) {
+    				$value .= $line . "<br />";
+    			}
+    		}
+    	}
+    	
+    	return $value;
+    }
+    function bicou_stack_trace_overview($stack_trace, $package) {
+    	$value = "";
+    	$lines = explode("\n", $stack_trace);
+    	foreach ($lines as $id => $line) {
+    		if (/*strpos($line, "Error") !== FALSE || strpos($line, "Exception"*/strpos($line, "E/ACRA") !== FALSE) {
+    			$value .= $line . "<br />";
+    		}
+    	}
+    	return $value;
+    }
+    function bicou_issue_id($stack_trace, $package) {
+    	return md5(bicou_short_stack_trace($stack_trace, $package));
+    }
+
+
+
+
 ?>
