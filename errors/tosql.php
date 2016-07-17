@@ -131,7 +131,7 @@ function initializeSQL($file, $device_id, $android_ver, $app_version, $time, $LO
             echo 'Updated SQL entry. Newest report: ' . $newestReport . '. Recorded events: ' . $recorded_events . '<br>';
         
     }else if(count == 0 || count < 0){
-	    echo 'New issue!! ID: ' . $issue_id . '. '
+	    echo 'New issue!! ID: ' . $issue_id . '. ';
     	$sql =  bicou_mysql_insert($obj);
     	if(!mysql_query($sql, $mysql)){
     	    die(mysql_error());
