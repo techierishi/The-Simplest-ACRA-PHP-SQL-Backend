@@ -75,7 +75,7 @@ Some places the table is set fixed to 'exceptions', for an instance in the tosql
 SQL insert command. That is why it is a good idea to call the table exceptions. Here is the fields.(NOTE: All should have utf8_general_ci. 
 The package field is set to latin1_swedish_ci by default for some reason. utf8_general_ci.)
 
-<img src=https://gamers-cave-world.com/publicimg/tables.png></img>
+<img src="http://gamers-cave-world.com/publicimg/tables.png"></img>
 
 
 **WARNING!**
