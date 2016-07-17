@@ -112,7 +112,7 @@ function initializeSQL($file, $device_id, $android_ver, $app_version, $time, $LO
 	 * after the first error. md5 generates codes based on the content, but it might sometimes
 	 * generate the same ID over and over.
 	 */
-	$getIssueID = "SELECT * FROM exceptions WHERE issue_id='$issue_id', package='$package'";
+	$getIssueID = "SELECT * FROM exceptions WHERE issue_id='$issue_id' and package='$package'";
     $lookForIssueId = mysql_query($getIssueID);
     if(!$lookForIssueId) echo 'failed! <br>';
     else echo 'Success!!! Issue ID loaded<br>';
