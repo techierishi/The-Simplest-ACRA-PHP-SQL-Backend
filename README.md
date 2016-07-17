@@ -18,7 +18,7 @@ If you are not using one.com, do not use the long link, in .htaccess instead say
 
 In the ACRA class that extends Application:
 
-@ReportsCrashes(
+    @ReportsCrashes(
 
         formUri = "..../report.php",//Non-password protected.
         customReportContent = { /* */ReportField.APP_VERSION_NAME, ReportField.PACKAGE_NAME,ReportField.ANDROID_VERSION,
@@ -26,9 +26,9 @@ In the ACRA class that extends Application:
         mode = ReportingInteractionMode.TOAST,
         resToastText = R.string.crash_toast_text
 
-)
+    )
 
-Permissiosn required:
+Permissions required:
 
 <uses-permission android:name="android.permission.INTERNET" /><br>
 <uses-permission android:name="android.permission.READ_LOGS"/>
@@ -56,6 +56,8 @@ In index.php and tosql.php, remember to add:
 * Database host
 * Database username
 * Database password
+ 
+And finally, there now are issue ID's which means reports will merge together of the content is the same
 
 ## Proguard:
 
