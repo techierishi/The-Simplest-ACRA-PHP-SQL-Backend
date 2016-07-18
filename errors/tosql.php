@@ -127,7 +127,7 @@ function initializeSQL($file, $device_id, $android_ver, $app_version, $time, $LO
             $newestReport = $date;
             $recorded_events = intval($row['recorded_events']);
             $recorded_events += 1;
-            mysql_query("UPDATE exceptions SET newest_report='$newestReport', recorded_events='$recorded_events' WHERE issue_id = $issue_id");
+            mysql_query("UPDATE exceptions SET newest_report='$newestReport' and recorded_events='$recorded_events' WHERE issue_id = $issue_id");
             echo 'Updated SQL entry. Newest report: ' . $newestReport . '. Recorded events: ' . $recorded_events . '<br>';
         
     }else if(count == 0 || count < 0){
