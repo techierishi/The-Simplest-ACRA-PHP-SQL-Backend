@@ -28,7 +28,7 @@ In the ACRA class that extends Application:
 
     )
 
-Permissions required:
+Permissions required in your app:
 
 <uses-permission android:name="android.permission.INTERNET" /><br>
 <uses-permission android:name="android.permission.READ_LOGS"/>
@@ -45,11 +45,11 @@ Link to the file called "report.php" in the first directory in your java file.
 Edit the file with your email(if you want to recieve emails) and set the boolean to "true".
 
 You will only recieve mails if the directory is empty. Which means you will only be informed about new crashes since you emptied the logs folder.
-!!SQL REQUIRED FOR THIS!!
+SQL is required.
 
 When you are on your computer open crash/tosql.php. This file will transfer all .txt files in logs to the SQL database.
 
-Remember, for 100% functionality, name the table 'exceptions'. 
+Remember, for 100% functionality, name the table 'exceptions'. It relies on that being the name. There is no install.php because we aimed for functionality durring use than useless space to a file used **once**
 
 In index.php and tosql.php, remember to add:
 * Database name
@@ -72,19 +72,17 @@ So you can both have ACRA and Proguard with this backend!
 ## IMPORTANT!
 
 Some places the table is set fixed to 'exceptions', for an instance in the tosql file there is a method that converts all the strings to 
-SQL insert command. That is why it is a good idea to call the table exceptions. Here is the fields.(NOTE: All should have utf8_general_ci. 
-The package field is set to latin1_swedish_ci by default for some reason. utf8_general_ci.)
+SQL insert command. That is why it is a good idea to call the table exceptions. Here is the fields.(NOTE: All should have utf8_general_ci.
+The package field is set to latin1_swedish_ci by default for some reason. utf8_general_ci is the correct to use.)
 
 <img src="http://gamers-cave-world.com/publicimg/tables.png"></img>
 
 
-**WARNING!**
+**NOTE!**
 <br>This project uses MySQL which means your PHP version has to be 5.6 or lower. PHP 7 removes MySQL functions from it making this 
-software useless. Avoid PHP 7 if you are to use this project. The PHP versions this project supports is:
-* 5.5.0
-* 5.6.0
+software useless. Avoid PHP 7 if you are to use this project. However, we are working on either creating a secondary project in which we 
+upload MySQLi or remove MySQL from this project. MySQLi project is created successfully on our website and is now going through bug checks
 
-Support for other versions may be added, but please create separate folders.(e.g. php 7 will be in PHP 7/errors/...)
 
 # Features:
 
@@ -109,8 +107,8 @@ This project is licenced under Creative Commons 4.0 Attribution Licence.
 Feel free to support the project by adding design or improving the PHP code. Keep the links in a simple format so they don't screw up the 
 code.
 
-So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really is 
-just to add the files to your website.
+So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really is
+just to add the files to your website). Remember to create the table 'exceptions'!!
 
 P.S: If we forgot something, open an issue and we will answer and add it to this file.
 
