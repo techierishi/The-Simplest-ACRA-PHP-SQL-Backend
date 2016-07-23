@@ -1,12 +1,12 @@
-﻿# ACRA-Simplest-Backend-With-Alterations
-
-
+﻿# The-Simplest-ACRA-PHP-SQL-Backend
 
 # Setup:
 
 ## Server side:
-You need a PHP MySQL server. Because of the simplicify of all this you can use webhosts like one.com. We're using that and we cannot use 
-any other backends because of the complexity(of the other backends). (NOTE: No SQL database is needed. Do not use index.php or tosql.php in
+
+For full functionality, you need a PHP MySQL server. Because of the simplicify of all this you can use webhosts like one.com. We're using 
+that and we cannot use any other backends because of the complexity(of the other backends). (NOTE: No SQL database is needed. Do not use 
+index.php or tosql.php in
 errors/ if you do not have a database)
 
 Once you have the requirements above, simply add the files to your website. Nothing else is required all though we recommend adding 
