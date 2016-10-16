@@ -30,7 +30,7 @@ In the ACRA class that extends Application:
 
 Permissions required in your app:
 
-    <uses-permission android:name="android.permission.INTERNET" /><br>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_LOGS"/>
 
 If you want to use other fields in the custom report content remember to add the fields in the database and you also have to customize
@@ -42,7 +42,7 @@ For the setup of ACRA, <a href="https://github.com/ACRA/acra/wiki/BasicSetup">se
 # Using it:
 
 Link to the file called "report.php" in the first directory in your java file.
-Edit the file with your email(if you want to recieve emails) and set the boolean to "true".
+Edit the file with your email(if you want to recieve emails) and set the boolean to "true"(default is false. IF you do not want emails you will not be bothered with them).
 
 You will only recieve mails if the directory is empty. Which means you will only be informed about new crashes since you emptied the logs folder.
 SQL is required.
