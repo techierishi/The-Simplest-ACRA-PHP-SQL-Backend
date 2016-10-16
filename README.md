@@ -30,8 +30,8 @@ In the ACRA class that extends Application:
 
 Permissions required in your app:
 
-<uses-permission android:name="android.permission.INTERNET" /><br>
-<uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.INTERNET" /><br>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
 
 If you want to use other fields in the custom report content remember to add the fields in the database and you also have to customize
 the tosql class. Changing content changes the order of the content. 
