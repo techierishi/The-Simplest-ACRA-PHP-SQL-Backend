@@ -46,7 +46,8 @@ SQL is required.
 
 When you are on your computer open crash/tosql.php. This file will transfer all .txt files in logs to the SQL database.
 
-Remember, for 100% functionality, name the table 'exceptions'. It relies on that being the name. There is no install.php because we aimed for functionality durring use than useless space to a file used **once**
+Remember, for 100% functionality, name the table 'exceptions'. It relies on that being the name. T*here is a setup.php file for MySQLi(we are no longer developing MySQL function as our server upgraded to PHP 7 with MySQLi) that adds the table and the nessesary rows. Remember to add the data into it before running it(database name, password, username)
+
 
 In index.php and tosql.php, remember to add:
 * Database name
@@ -62,6 +63,8 @@ If your app is using Proguard, no need to worry! We have tested our app with rel
 scrabled and the StackTrace is accurate to the error we caused. We have been testing with a crash we have been triggering ourselves and 
 the Stacktrace matches the one of a non-scrambled text file(in terms of the error and location of the error. Times are not the same. 
 StackTrace may change from error to error but the error pinpointing is the same.)
+
+Methods and classes that aren't defined othervise in the proguard config files will however be scrambled(com.package.subpackage.A.a(SourceFile:123)). This can be deobfuscated using the traceback filter.
 
 So you can both have ACRA and Proguard with this backend!
 
