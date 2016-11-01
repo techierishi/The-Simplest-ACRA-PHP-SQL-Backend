@@ -4,10 +4,7 @@
 
 ## Server side:
 
-For full functionality, you need a PHP MySQL server. Because of the simplicify of all this you can use webhosts like one.com. We're using 
-that and we cannot use any other backends because of the complexity(of the other backends). (NOTE: No SQL database is needed. Do not use 
-index.php or tosql.php in
-errors/ if you do not have a database)
+For full functionality, you need a PHP MySQL server. NOTE: No SQL database is needed. Do not use index.php or tosql.php in errors/ if you do not have a database.
 
 Once you have the requirements above, simply add the files to your website. Nothing else is required all though we recommend adding 
 password protection in the errors folder. If you protect report.php you will need a password in the Java class.
@@ -91,26 +88,29 @@ upload MySQLi or remove MySQL from this project. MySQLi project is created succe
 * You can manually transfer all .txt files into an sql database
 * You can view all the entries in the SQL database.
 * You can view all .txt files without entering them into the SQL database(very important if your server does not support MySQL.
-* If your website does not have databases, remove the database dependant files in errors/
+* If your website does not have databases, remove the database dependant files in errors/. Alternativly do not use them.
 
 
 # Notes:
 
 No .htaccess or .htpasswd is created. Create them yourself.
 
-A good idea is to **not** password protect 'submit.php' as that would require you to add password and username in the Java code. Java code 
-isn't really that save, even inside the APK. There are multiple ways to break into the APK source code and see it and then your password 
-and username would be out in the open. And passwords and username can be exploited.
+A good idea is to password protect the `report.php` file with a password, but not the same as you use for the rest of your setup as 
+decompiled java files show the password. Using the same password for the `report.php` and the rest of the framework is **not** 
+recommended. The password on report file is to prevent abuse(as we had where 60 fake reports with the symbol `,` used alone with a lot 
+of empty fields). This does not just generate reports you do not want but can also porentially be used for SQL injection. Password 
+protecting the report.php file is a good measure for preventing this.
 
 
 This project is licenced under Creative Commons 4.0 Attribution Licence.
-Feel free to support the project by adding design or improving the PHP code. Keep the links in a simple format so they don't screw up the 
-code.
+Feel free to support the project by adding design or improving the PHP code. Keep the links in a simple format so they don't screw up 
+the code.
 
-So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really is
-just to add the files to your website). Remember to create the table 'exceptions'!!
+So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really 
+is just to add the files to your website). Remember to create the table 'exceptions', or if you are using MySQLi run `setup.php`
 
 P.S: If we forgot something, open an issue and we will answer and add it to this file.
 
 ENJOY!
+
 Gamers Cave
