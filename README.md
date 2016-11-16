@@ -28,7 +28,8 @@ In the ACRA class that extends Application:
 Permissions required in your app:
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_LOGS"/>
+    
+<strike><uses-permission android:name="android.permission.READ_LOGS"/></strike> This permission is not allowed by third party apps
 
 If you want to use other fields in the custom report content remember to add the fields in the database and you also have to customize
 the tosql class. Changing content changes the order of the content. 
