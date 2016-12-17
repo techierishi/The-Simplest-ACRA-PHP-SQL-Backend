@@ -1,5 +1,5 @@
 <?php
-    $sendMail = true;//Should send email to inform?
+    $sendMail = false;//Should send email to inform? Default = false due to 
     
     date_default_timezone_set("Europe/Berlin");
     $date = date('d-m-Y_H-i-s');
@@ -8,9 +8,9 @@
             /**
              * The point of the email informative system is to inform you when crashes occur. This allows you to clear the SQL database.
              */
-            $mail = 'address';
+            $mail = 'address@example.com';
             $subj = "Crash";
-            $msg = "A crash occured in one of your apps. This happened at " . $date . ". Move it over to the SQL database https://gamers-cave-world.com/android/crash/tosql.php now>
+            $msg = "A crash occured in one of your apps. This happened at " . $date . ". Move it over to the SQL database now! https://gamers-cave-world.com/android/crash/tosql.php
             
             With love from your trusty ACRA backend!
             
@@ -18,7 +18,10 @@
             
             Our website: https://gamers-cave-world.com>gamers-cave-world.com
             ";
-            mail($mail, $subj, $msg);
+             $headers = date('r', time()) . "\r\n". //Date header to not classify as spam
+            "From: " . "Gamers Cave".'<support@gamers-cave-world.com>' . "\r\n";//Who is the email from?
+            mail($mail, $subj, $msg, $headers);
+       
         }
     }
     $fileName = $date .'.txt';
