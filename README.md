@@ -4,12 +4,10 @@
 
 ## Server side:
 
-For full functionality, you need a PHP MySQL server. NOTE: No SQL database is needed. Do not use index.php or tosql.php in errors/ if you do not have a database.
+For full functionality, you need a PHP MySQL server. However, no SQL database is needed. Do not use index.php or tosql.php in errors/ if you do not have a database. Use `viewfiles.php` to see the logs without SQL. The file viewer only allows for viewing and you cannot delete files through it. We have not focused on the file viewer as much as we have on the SQL section
 
 Once you have the requirements above, simply add the files to your website. Nothing else is required all though we recommend adding 
 password protection in the errors folder. If you protect report.php you will need a password in the Java class.
-
-If you are not using one.com, do not use the long link, in .htaccess instead say(if it is in the same folder): .htpasswd
 
 ## Client side:
 
@@ -60,12 +58,7 @@ And finally, there now are issue ID's which means reports will merge together of
 
 ## Proguard:
 
-If your app is using Proguard, no need to worry! We have tested our app with release and Proguard activated and it works. The file is not 
-scrabled and the StackTrace is accurate to the error we caused. We have been testing with a crash we have been triggering ourselves and 
-the Stacktrace matches the one of a non-scrambled text file(in terms of the error and location of the error. Times are not the same. 
-StackTrace may change from error to error but the error pinpointing is the same.)
-
-Methods and classes that aren't defined othervise in the proguard config files will however be scrambled(com.package.subpackage.A.a(SourceFile:123)). This can be deobfuscated using the traceback filter.
+If your app is using Proguard, no need to worry! We have been testing it with proguard and all though it may be scrambled in this format: `com.package.subpackage.A.a(SourceFile:123)`. This can be deobfuscated using the traceback filter given when you build the release for the app. For details on keeping file names and line numbers, or getting the deobfuscation filter, see [this StackOverflow post](http://stackoverflow.com/questions/3913338/how-to-debug-with-obfuscated-with-proguard-applications-on-android)
 
 So you can both have ACRA and Proguard with this backend!
 
@@ -73,8 +66,7 @@ So you can both have ACRA and Proguard with this backend!
 ## IMPORTANT!
 
 Some places the table is set fixed to 'exceptions', for an instance in the tosql file there is a method that converts all the strings to 
-SQL insert command. That is why it is a good idea to call the table exceptions. Here is the fields.(NOTE: All should have utf8_general_ci.
-The package field is set to latin1_swedish_ci by default for some reason. utf8_general_ci is the correct to use.)
+SQL insert command. That is why it is a good idea to call the table exceptions. Here is the fields.(NOTE: All should have utf8_general_ci. The package field is set to latin1_swedish_ci by default for some reason. utf8_general_ci is the correct to use.)
 
 <img src="http://gamers-cave-world.com/publicimg/tables.png"></img>
 
@@ -89,9 +81,10 @@ upload MySQLi or remove MySQL from this project. MySQLi project is created succe
 
 * Simple setup
 * Easy to use
+* Issue ID's!
 * You can manually transfer all .txt files into an sql database
 * You can view all the entries in the SQL database.
-* You can view all .txt files without entering them into the SQL database(very important if your server does not support MySQL.
+* You can view all .txt files without entering them into the SQL database(very useful if your server does not support MySQLi or you do not want to use it)
 * If your website does not have databases, remove the database dependant files in errors/. Alternativly do not use them.
 
 
