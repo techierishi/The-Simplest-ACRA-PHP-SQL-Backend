@@ -27,7 +27,7 @@ if(isset($_REQUEST['time'])){
 
 sleep(3);
    
-die(header("Location: https://gamers-cave-world.com/android/crash/index.php?$state"));
+die(header("Location: index.php?$state"));
 
 
 
