@@ -17,11 +17,11 @@ In the ACRA class that extends Application:
 
     @ReportsCrashes(
 
-        formUri = "..../report.php",//Non-password protected.
+        formUri = "http://example.com/path/to/report.php",//Non-password protected.
         customReportContent = { /* */ReportField.APP_VERSION_NAME, ReportField.PACKAGE_NAME,ReportField.ANDROID_VERSION,
-        ReportField.PHONE_MODEL,ReportField.LOGCAT },
-        mode = ReportingInteractionMode.TOAST,
-        resToastText = R.string.crash_toast_text
+        ReportField.PHONE_MODEL,ReportField.LOGCAT },//Changing this field requires you to change the toSql file to fit the format of the text file sent to the server. The text file does not contain the fields in this order. 
+        mode = ReportingInteractionMode.TOAST,//Can change this field
+        resToastText = R.string.crash_toast_text//Can change this field
 
     )
 
@@ -97,24 +97,20 @@ upload MySQLi or remove MySQL from this project. MySQLi project is created succe
 
 # Notes:
 
-No .htaccess or .htpasswd is created. Create them yourself.
+No .htaccess or .htpasswd is created. Create them yourself. This is due to Github limitations.
 
 A good idea is to password protect the `report.php` file with a password, but not the same as you use for the rest of your setup as 
 decompiled java files show the password. Using the same password for the `report.php` and the rest of the framework is **not** 
 recommended. The password on report file is to prevent abuse(as we had where 60 fake reports with the symbol `,` used alone with a lot 
-of empty fields). This does not just generate reports you do not want but can also porentially be used for SQL injection. Password 
+of empty fields). This does not just generate reports you do not want but can also potentially be used for SQL injection. Password 
 protecting the report.php file is a good measure for preventing this.
 
 
 This project is licenced under Creative Commons 4.0 Attribution Licence.
-Feel free to support the project by adding design or improving the PHP code. Keep the links in a simple format so they don't screw up 
-the code.
+Feel free to support the project by adding design or improving the PHP code. 
 
 So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really 
 is just to add the files to your website). Remember to create the table 'exceptions', or if you are using MySQLi run `setup.php`
 
-P.S: If we forgot something, open an issue and we will answer and add it to this file.
 
 ENJOY!
-
-Gamers Cave
