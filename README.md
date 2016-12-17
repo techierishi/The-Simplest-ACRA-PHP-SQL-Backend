@@ -111,6 +111,3 @@ Feel free to support the project by adding design or improving the PHP code.
 
 So this is the simplest PHP SQL backend there is. We can say that on accounts of the few lines of code, the simple install(which really 
 is just to add the files to your website). Remember to create the table 'exceptions', or if you are using MySQLi run `setup.php`
-
-
-ENJOY!
