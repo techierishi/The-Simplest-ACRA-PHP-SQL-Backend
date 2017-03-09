@@ -87,6 +87,16 @@ upload MySQLi or remove MySQL from this project. MySQLi project is created succe
 * You can view all .txt files without entering them into the SQL database(very useful if your server does not support MySQLi or you do not want to use it)
 * If your website does not have databases, remove the database dependant files in errors/. Alternativly do not use them.
 
+# Contribution
+
+If you want to contribute to this project, but don't know where to start, here is a list of features that needs implementation
+
+* Improved login(without .htaccess and .htpasswd)
+* Graphs showing crashes by(day, week, month)
+* Searchability for issues
+* Improve design
+* Improve issue IDs
+* Improve report-script to make sure the report data gets inserted into the correct database even with different order
 
 # Notes:
 
